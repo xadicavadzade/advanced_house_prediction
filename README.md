@@ -19,12 +19,18 @@ Key Achievement: Improved model performance from R² = 0.88 (single XGBoost) to 
 
 
 Ensemble Composition
+
+
 The stacking model combines multiple base estimators:
 
 
 
 Gradient Boosting Regressor (500 estimators, learning_rate=0.05)
+
+
 LightGBM Regressor (1500 estimators, learning_rate=0.03)
+
+
 Ridge Regression (Meta-learner, alpha=1.0)
 
 
@@ -32,6 +38,12 @@ Ridge Regression (Meta-learner, alpha=1.0)
 # Feature Engineering Pipeline
 
 Neighborhood Price Mapping: Median price encoding for categorical neighborhoods
+
+
 Ordinal Feature Encoding: Smart mapping for quality and condition features
+
+
 Missing Value Imputation: Strategic handling of numerical and categorical features
+
+
 Log Transformation: Applied to target variable (SalePrice) for better distribution
